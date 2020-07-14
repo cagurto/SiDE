@@ -155,6 +155,7 @@ def envelope_cavity(rho, grid, ppar, modeCav=None):
     ppar : dict
            Dictionary provided by modPar.ppar (radmc3dPar object)
     '''
+    au = radmc3dPy.natconst.au
     rr, th = np.meshgrid(grid.x, grid.y, indexing='ij')
     z0 = np.zeros([grid.nx, grid.ny, grid.nz], dtype=np.float64)
     zz   = rr * np.cos(th)
